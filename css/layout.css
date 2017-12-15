@@ -1,0 +1,212 @@
+::-moz-selection {
+  background: #d39c32;
+}
+::selection {
+  background: #d39c32;
+}
+::-moz-selection {
+  background: #d39c32;
+}
+
+html, body { height:100%; width:100%; }
+
+body {
+	margin:0;
+	background-color: black;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color:white;
+	font-size: 1.2em;
+    font-family:Alegreya;
+}
+
+#foreground {
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:50%;
+	height:100%;
+	background-size:contain;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 30em) { #foreground { background-image: url('../img/mary1500.png'); } }
+@media screen and (max-width: 30em) { #foreground { background-image: url('../img/mary400.png'); } }
+
+#foreground.foreground-js {
+    opacity: 0;
+    margin-bottom:-1%;
+}
+
+#foreground.animate {
+    -webkit-transition:1s;
+    -o-transition:1s;
+    transition:1s;
+    opacity: 1;
+    margin-bottom:0;
+}
+
+#content {
+	position: absolute;
+	left:50%;
+	top:0;
+	width:44%;
+}
+
+#content p {
+	text-shadow: 0 0 0.8vw black;
+	text-align:center;
+}
+
+#content h1 {
+	text-align:center;
+	font-family:Parisienne;
+	display:block;
+	font-size:5em;
+    line-height: 1em;
+	color:#ffcc69;
+	font-weight:normal;
+	text-shadow: 0 0 0.5vw grey;
+}
+h1 .indented {padding-left:1.5em;}
+
+#contact {
+	background-color:rgba(0, 0, 0, 0.7);
+	border-radius:10em;
+	margin: 2em auto;
+    width:20em;
+    height:20em;
+    text-align: center;
+}
+#contact.contact-js {-webkit-transform: scale(0.8);-ms-transform: scale(0.8);transform: scale(0.8);}
+#contact.show {-webkit-transition:1s;-o-transition:1s;transition:1s;-webkit-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}
+
+#contact h2 {
+    padding-top:1em;
+	color:#d39c32;
+}
+
+.sub, h2 {
+	font-family:Parisienne;
+	font-size:2em;
+	text-align:center;
+    margin:0;
+    font-weight: normal;
+}
+
+#socialbuttons {
+	padding:0  10px;
+}
+
+#quotes {
+	position:relative;
+	background-image: url('../img/quotes.png');
+	background-repeat:no-repeat;
+    background-size: 4em auto;
+    background-position: 0 .5em;
+	display:block;
+	padding-left:5em;
+	overflow:hidden;
+    margin:4em 0 1em 0;
+}
+
+#quotes q { font-style: italic; display:block; margin-bottom:0.6em; }
+
+#quotes .quotetext {
+	margin-bottom:1em;
+	position:relative;
+	top:0;
+}
+
+
+#quotes .quotetext-js {
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:5em;
+    margin:0;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+	border-radius: 50%;
+	background-color:black;
+	margin-left:10px;
+}
+
+.fa-facebook {
+    background: #3B5998;-webkit-transition: background-color 100ms linear;-o-transition: background-color 100ms linear;transition: background-color 100ms linear;
+    color: white;
+}
+.fa-facebook:hover { background: #637cb0; }
+
+.fa-youtube {
+    background: #bb0000;-webkit-transition: background-color 100ms linear;-o-transition: background-color 100ms linear;transition: background-color 100ms linear;
+    color: white;
+}
+.fa-youtube:hover { background: #d44949; }
+
+
+@media screen and (orientation: portrait), screen and (max-width:56em) {
+    #content {
+        position:static;
+        width:95%;
+        margin:0 auto;
+    }
+    
+    h1 {
+        display:block;
+        margin:0.3em 0;
+    }
+    
+    .sub {
+        margin-top:1em;
+    }
+
+    #foreground {
+        position:static;
+        width:15em;
+		height:15em;
+        border-radius: 7.5em;
+        margin: 0 auto;
+		-webkit-box-shadow:0 0 1em black;
+		        box-shadow:0 0 1em black;
+    }
+}
+
+@media screen and (min-width:56em) and (orientation: portrait) {
+    #foreground {
+        width:20em;
+		height:20em;
+        border-radius: 10em;
+		font-size:1em;
+    }
+	#content { width:80%; }
+}
+
+@media screen and (max-width: 30em) {
+	body {
+		font-size:1em;
+	}
+    #contact {
+		max-width:100%;
+	}
+	#content h1 {
+		text-align:center;
+		font-family:Parisienne;
+		display:block;
+		font-size:3em;
+		line-height: 1em;
+		color:#ffcc69;
+		font-weight:normal;
+		text-shadow: 0 0 0.5vw grey;
+	}
+	h1 .indented {padding-left:1.5em;}
+}
